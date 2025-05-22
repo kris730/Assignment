@@ -1,0 +1,666 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d8c9a2;
+  color: #333;
+
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #c596d3;
+  color: white;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Book Card Styles */
+.book__card {
+  margin-top: 0; 
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(172, 141, 141, 0.1);
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+
+.book__card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book__card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.book__card p {
+  margin: 5px 0;
+  color: #3f3c3c;
+}
+
+.visit_book {
+  margin-top: auto;
+  text-align: center;
+}
+
+.visit_book button {
+  background-color: #eff3f3;
+  color: rgb(67, 63, 59);
+  border: 1px solid black;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; 
+  margin-bottom: 20px; 
+  padding: 10px 20px; 
+}
+
+
+/* Search Bar Styles */
+.seach {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: -42px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 400px;
+}
+
+.seach:focus {
+  outline: none;
+  border-color: #b8a6a5;
+  box-shadow: 0 0 5px rgba(158, 127, 125, 0.5);
+}
+
+
+/* Book List Styles */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  
+  gap: 65px 24px;
+  padding: 20px;
+}
+
+.book-details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.book-image-container {
+  margin-right: 20px;
+}
+
+.book-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.author, .publishdate, .description, .pages, .category, .price, .rating {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.back-btn-browse {
+  background-color: #d6a7ab;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.invalid-msg {
+  color: #9a8181; 
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffcccc; 
+  border: 1px solid #c4a0a0; 
+  border-radius: 5px;
+}
+
+/* Category Buttons */
+.cat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cat-item {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  color: #292727;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cat-item:hover {
+  background-color: #bb9c9a;
+  color: white;
+}
+.cat_dropdown {
+  margin-bottom: 15px;
+}
+
+#cat_select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ab9a9a;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+
+/* Add Book Form Styles */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 97%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #62a5bc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #aa799f;
+}
+
+/* Home Styles */
+h2 {
+  color: #c37994;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  color: #333;
+}
+/* Clear Filter Button */
+.clear-filter-button {
+  background-color: #d2a09c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.clear-filter-button:hover {
+  background-color: #d0a2a2;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.active {
+  color: #ffd700; 
+}
+
+
+
+input[type="file"] {
+  font-size: 14px;
+}
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #c4e7cc;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.search-Bar {
+    margin-top: 40px;
+    height: 40px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    background-color: #f8f9fa; /* Light background */
+    color: #000000; /* Dark black text */
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.search-Bar:hover {
+    background-color: #e2e6ea; /* Slightly darker shade on hover */
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .navbar h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    /* Book List */
+    .book-list {
+        grid-template-columns: repeat(2, 1fr); /* Show only 2 columns */
+        gap: 20px;
+    }
+
+    /* Book Card */
+    .book__card {
+        padding: 10px;
+    }
+
+    .book__card img {
+        height: 150px; /* Reduce image height */
+    }
+
+    .book__card h3 {
+        font-size: 1rem;
+    }
+
+    .book__card p {
+        font-size: 14px;
+    }
+
+    /* Search Bar */
+    .search-Bar {
+        width: 90%;
+        max-width: 350px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Category Buttons */
+    .cat-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cat-item {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    /* Add Book Form */
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    /* Book Details */
+    .book-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-image {
+        width: 80%;
+        height: auto;
+    }
+
+    .book-details {
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .author, .publishdate, .description, .pages, .category, .price, .rating {
+        font-size: 16px;
+    }
+
+    /* Buttons */
+    .clear-filter-button, .back-btn-browse {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 232px) {
+    form {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    form h2 {
+        font-size: 16px;
+    }
+
+    form input {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    form button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    /* Book List */
+    .book-list {
+        grid-template-columns: repeat(2, 1fr); /* Display only 2 columns */
+        gap: 20px;
+    }
+
+    /* Book Card */
+    .book__card img {
+        height: 150px; /* Smaller images */
+    }
+
+    .book__card h3 {
+        font-size: 1rem;
+    }
+
+    .book__card p {
+        font-size: 14px;
+    }
+
+    /* Search Bar */
+    .search-Bar {
+        width: 90%;
+        max-width: 350px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Category Buttons */
+    .cat-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cat-item {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    /* Add Book Form */
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 16px;
+    }
+
+    form input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        box-sizing: border-box; /* Prevents overflow */
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    /* Fix for Title Input Overflow */
+    form input[type="text"] {
+        max-width: 180px; /* Keeps it within the form */
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* Book Details */
+    .book-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-image {
+        width: 80%;
+        height: auto;
+    }
+
+    .book-details {
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .author, .publishdate, .description, .pages, .category, .price, .rating {
+        font-size: 16px;
+    }
+
+    /* Buttons */
+    .clear-filter-button, .back-btn-browse {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    .cat_select {
+        width: 100%; /* Ensures it fits within the container */
+        max-width: 220px; /* Prevents overflow */
+        font-size: 14px; /* Adjust font size */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 232px) {
+    .cat_select {
+        max-width: 180px; /* Prevents overflow on ultra-small screens */
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book-list {
+        grid-template-columns: repeat(2, 1fr); /* Show only 2 columns */
+        gap: 30px; /* Increase space between items */
+    }
+
+    .search-Bar {
+        width: 90%;
+        max-width: 350px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .book__card {
+        padding: 10px;
+        margin-bottom: 20px; /* Adds space below each card */
+    }
+
+    .book-details-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px; /* Adds space between details */
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 300px) {
+    .book-list, .book-details-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .book__card, .book-image, .book-details {
+        width: 100%;
+        max-width: 250px; /* Ensures proper sizing */
+        text-align: center;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .author, .publishdate, .description, .pages, .category, .price, .rating {
+        font-size: 14px;
+    }
+
+    .search-Bar {
+        width: 90%;
+        max-width: 250px;
+        font-size: 12px;
+        padding: 6px;
+    }
+}
