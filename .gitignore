@@ -1,43 +1,56 @@
-# <<<<<<< HEAD
-# # Logs
-# logs/
-# *.log
-# npm-debug.log*
-# yarn-debug.log*
-# yarn-error.log*
-# pnpm-debug.log*
-# lerna-debug.log*
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# # Dependency directories
-# node_modules/
-# jspm_packages/
+# Dependency directories
+node_modules/
+jspm_packages/
 
-# # Build output
-# dist/
-# dist-ssr/
-# .local
+# Build output
+dist/
+dist-ssr/
+.local
 
-# # Editor directories and files
-# .vscode/*
-# !.vscode/extensions.json
-# .idea/
-# .DS_Store
-# *.suo
-# *.ntvs*
-# *.njsproj*
-# *.sln
-# *.sw?
-# =======
-# # Generated files
-# target/
-# generated/
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj*
+*.sln
+*.sw?
 
-# # Dependencies
-# Dependencies.toml
+# Testing-related files
+coverage/
+.nyc_output/
+*.lcov
 
-# # Config files
-# Config.toml
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# # Uncomment the following line if you want to commit the test config files
-# #!**/tests/Config.toml
-# >>>>>>> feature-branch
+# Optional configurations
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Generated files
+target/
+generated/
+
+# Configuration files
+Dependencies.toml
+Config.toml
+
+# Uncomment the following line if you want to commit the test config files
+#!**/tests/Config.toml
